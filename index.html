@@ -1,0 +1,160 @@
+<!-- Index file -->
+<!DOCTYPE html>
+<html>
+  <body>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F5AE;
+
+    background-image: radial-gradient(circle, #FFFFFF 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    padding: 30px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
+  }
+
+  .visit-badge {
+    display:inline-block;
+    background:#aa9549;
+    color:white;
+    padding:6px 12px;
+    border-radius:8px;
+    margin-top:20px;
+    font-size:14px;
+  }
+
+  .here-btn {
+    display:inline-block;
+    background:#7A4419;
+    color:white;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+    font-size:15px;
+  }
+
+  p {
+    margin: 6px 0;
+    line-height: 1.3;
+  }
+
+  .spacer {
+    height: 45px;
+  }
+  </style>
+
+<!-- haha why are you here?!? -->
+<div class="header">
+  <img src="header.svg" alt="Header">
+</div>
+
+<div class="content">
+  <h1>Josh's Website</h1>
+  <p>Hello there, welcome to my first ever website!</p>
+  <p>As you can see, I'm still not good with HTML / css, but I've been improving. Also, as you may have seen already, I'm josh!</p>
+  <p>This website is just a small place to browse simple test things I've been trying... Have fun!</p>
+  
+  <div class="spacer"></div>
+  
+  <h2>Simple HTML Tests</h2>
+    <ul>
+    <a href="http://youtube.com" target="_blank">Youtube link test.</a>
+    
+    <ol>Ordered list</ol>
+    <ol>Ordered list 02</ol>
+    <li>List</li>
+    <li>List 02</li>
+  </ul>
+  
+  <div class="spacer"></div>
+    
+   <h2>Did you know...</h2>
+   <p>Did you know that this entire site is open source?</p>
+   <p>I'll post all of the code used to create it, but not the images.</p>
+   <p><a href="https://joshahi.neocities.org/src">Click To Visit!</a></p>
+     
+  <div class="spacer"></div>
+  
+  <h2>My Tools!</h2>
+  <p>A little section of tools I've created, these may be coming slow, but I'll add more!</p>
+  <p>Feel free to have fun with my little tools :3</p>
+  
+  <ul>
+  <li><p><a href="https://joshahi.neocities.org/hex">Hex palette maker</a></p></li>
+  </ul>
+
+  <!-- I WAS HERE BUTTON -->
+  <div class="here-btn" id="wasHereBtn" onclick="wasHere()">I was here!</div>
+
+  <div class="visit-badge">
+    Visitors: <span id="count"></span>
+  </div>
+  
+  <p>
+  <a href="https://neocities.org/" target="_blank">
+    <img src="/neocities.png" width="200">
+  </a>
+</div>
+
+<script src="counter.js"></script>
+
+<script>
+let visits = parseInt(localStorage.getItem("visitors") || "0");
+let clicked = localStorage.getItem("clickedHere") === "true";
+
+document.getElementById("count").textContent = visits;
+
+if (clicked) {
+  const btn = document.getElementById("wasHereBtn");
+  btn.style.background = "#999";
+  btn.style.cursor = "default";
+  btn.onclick = null;
+}
+
+function wasHere() {
+  if (clicked) return;
+
+  visits++;
+  localStorage.setItem("visitors", visits);
+  localStorage.setItem("clickedHere", "true");
+
+  document.getElementById("count").textContent = visits;
+
+  const btn = document.getElementById("wasHereBtn");
+  btn.style.background = "#999";
+  btn.style.cursor = "default";
+  btn.onclick = null;
+}
+</script>
+
+  </body>
+</html>
