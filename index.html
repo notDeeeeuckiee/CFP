@@ -3,80 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <title>Coldfront Digital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
     body {
         margin: 0;
-        padding: 40px 20px;
-        font-family: Arial, sans-serif;
-        background: #ffdbd6;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
         color: #222;
-        max-width: 700px;
-        line-height: 1.5;
     }
 
+    /* Header */
     header {
-        margin-bottom: 40px;
+        background-color: #0d1b2a;
+        color: white;
+        padding: 18px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 4px solid #1b263b;
     }
 
-    h1 {
-        font-size: 32px;
-        margin: 0 0 10px;
-        font-weight: 700;
-        letter-spacing: -1px;
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
     }
 
     nav a {
-        margin-right: 15px;
+        color: white;
         text-decoration: none;
-        color: #444;
+        margin-left: 25px;
         font-size: 15px;
+        font-weight: 500;
     }
 
     nav a:hover {
         text-decoration: underline;
     }
 
-    .box {
-        background: #fff;
-        border: 1px solid #ddd;
+    /* Hero Section */
+    .hero {
+        background-color: #1b263b;
+        color: white;
+        padding: 80px 40px;
+        text-align: left;
+        border-bottom: 4px solid #415a77;
+    }
+
+    .hero h2 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        margin-top: 10px;
+        font-size: 18px;
+        max-width: 600px;
+        line-height: 1.5;
+    }
+
+    /* Section */
+    section {
+        padding: 50px 40px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    section h3 {
+        margin-top: 0;
+        font-size: 26px;
+        font-weight: 600;
+        border-left: 5px solid #1b263b;
+        padding-left: 10px;
+    }
+
+    .game-card {
+        background-color: #f8f8f8;
         padding: 20px;
-        border-radius: 6px;
+        border: 1px solid #ccc;
         margin-top: 20px;
     }
 
+    .connect-box {
+        background-color: #eef2f5;
+        padding: 20px;
+        border: 1px solid #bbb;
+        margin-top: 20px;
+    }
+
+    /* Footer */
     footer {
-        margin-top: 50px;
-        font-size: 13px;
-        color: #777;
+        background-color: #0d1b2a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        border-top: 4px solid #1b263b;
     }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>ForgeFest</h1>
+    <h1>Coldfront Digital</h1>
     <nav>
-        <a href="https://cfdigital.pages.dev/">Home</a>
-        <a href="https://cfdigital.pages.dev/">Archive</a>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">Account</a>
+        <a href="#">Support</a>
     </nav>
 </header>
 
-<div class="box">
-    <h2>Season 1 (2026)</h2>
-    <p>MMM Interesting, this is a placeholder ima change it in a bit</p>
-
-    <p>4redfr4edfredredfre</p>
+<div class="hero">
+    <h2>We love games.</h2>
+    <p>Ever since we've started playing games like Fortnite, COD, Halo, and more we've become inspired to create our own games. We haven't released any yet, but that is soon to change. Coming early to mid 2027 a new battle royale will come along, stay tuned for updates!</p>
 </div>
 
-<div class="box">
-    <h3>???</h3>
-    <p>>???: <strong>Closed</strong></p>
-    <p>>???: Yes</p>
-    <p>>???: Closed</p>
-</div>
+<section>
+    <h3>Latest Releases</h3>
+    <div class="game-card">
+        <strong>Coming Soon:</strong> Our new first person battle royale game that is very detailed, while also being optimized to run on all devices. Coming early/mid 2027.
+    </div>
+</section>
+
+<section>
+    <h3>Connect Your Account</h3>
+    <div class="connect-box">
+        Sign in with your platform account (Steam, PSN, Xbox) to sync your progress across devices. (Coming Soon)
+        <br><br>
+        <button style="padding:10px 20px; background:#1b263b; color:white; border:none; cursor:pointer;">
+            Connect Account
+        </button>
+    </div>
+</section>
 
 <footer>
-    © 2026 ???
+    © 2026 Coldfront Digital - All Rights Reserved
 </footer>
 
 </body>
